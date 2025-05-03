@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recognizer Demo</title>
+  <!-- Bootstrap CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <h1 class="mb-4 text-center">Barcode & Object Recognizer</h1>
+
+    <!-- Новая секция: возможности модели -->
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Возможности модели</h5>
+        <ul class="card-text mb-0">
+          <li>Распознаёт штрих‑коды, сроки годности и имя и возвращает их в виде списка.</li>
+          <li>Обнаруживает объекты (названия товаров) с координатами прямоугольников (bbox).</li>
+          <li>Предоставляет уверенность (confidence) для каждого детекта от 0.0 до 1.0.</li>
+          <li>Возвращает JSON-ответ со всеми данными и аннотированное изображение.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card p-4 shadow-sm">
+      <div class="mb-3">
+        <input
+          type="file"
+          id="fileInput"
+          accept="image/*"
+          class="form-control"
+        />
+      </div>
+      <button id="uploadBtn" class="btn btn-primary w-100" disabled>
+        Загрузить и распознать
+      </button>
+    </div>
+
+    <div id="result" class="mt-4 text-center">
+      <img
+        id="resultImage"
+        src=""
+        alt="Annotated result"
+        class="img-fluid rounded shadow-sm"
+      />
+    </div>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

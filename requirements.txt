@@ -7,3 +7,5 @@ pillow
 pydantic
 typing
 python-multipart
+aiofiles
+jinja2
