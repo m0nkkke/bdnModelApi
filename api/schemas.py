@@ -1,11 +1,11 @@
 from pydantic import BaseModel
 from typing import List, Tuple
 
-class Item(BaseModel):
-    name: str
-    confidence: float   
-    bbox: Tuple[float, float, float, float]  # (x1, y1, x2, y2)
+class DetectionItem(BaseModel):
+    type: str                     # "barcode" | "date" | "name"
+    value: str                    # распознанный текст
+    confidence: float             # вероятность
+    bbox: Tuple[float, float, float, float]
 
 class PredictionResponse(BaseModel):
-    barcodes: List[str]
-    items: List[Item]
+    items: List[DetectionItem]
