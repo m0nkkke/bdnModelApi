@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+ultralytics
+torch
+torchvision
+pillow
+pydantic
+typing
+io
