@@ -6,4 +6,4 @@ torchvision
 pillow
 pydantic
 typing
-io
+python-multipart
